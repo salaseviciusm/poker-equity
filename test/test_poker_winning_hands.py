@@ -1,5 +1,5 @@
 import unittest
-import src.poker.poker_hands as poker
+import src.poker.poker_game as poker
 
 
 class TestWinningHands(unittest.TestCase):
