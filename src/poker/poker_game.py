@@ -1,5 +1,6 @@
 import random
 from src.poker.poker_hands import *
+from src.poker.common import decode_hand
 
 
 def generate_deck():
@@ -108,3 +109,4 @@ def get_winning_hands(hands, river):
     best = highest[0]
     # All cards in the big-hand have to match the best big-hand
     return [f for f in flushes if str(f[1]) == str(best[1])]
+
