@@ -93,7 +93,7 @@ def get_winning_hands(hands, river):
 
     two_pairs = _get_list_of_winning_hand_tuples(hands, river, get_two_pair)
     if len(two_pairs) >= 1:
-        highest = sorted(two_pairs, key=lambda x: (int(get_number(x[1][0])), int(get_number(x[1][2]), int(get_number(x[1][5])))), reverse=True)
+        highest = sorted(two_pairs, key=lambda x: (int(get_number(x[1][0])), int(get_number(x[1][2])), int(get_number(x[1][4]))), reverse=True)
         best = highest[0]
         return [f for f in two_pairs if str(f[1]) == str(best[1])]
 

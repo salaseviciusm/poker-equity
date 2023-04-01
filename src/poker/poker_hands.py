@@ -174,7 +174,11 @@ def get_three_of_a_kind(hand, river):
     for c in big_hand:
         count[get_number(c)] += 1
 
-    three_of_a_kind = sorted([n for n, c in count.items() if c >= 3], reverse=True)[0]
+    three_of_a_kind = sorted([n for n, c in count.items() if c >= 3], reverse=True)
+    if len(three_of_a_kind) == 0:
+        return None
+
+    three_of_a_kind = three_of_a_kind[0]
     return [*[c for c in big_hand if get_number(c) == three_of_a_kind],
             *sorted([c for c in big_hand if get_number(c) != three_of_a_kind], key=lambda c: int(get_number(c)), reverse=True)[:2]]
 
